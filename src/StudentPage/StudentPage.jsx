@@ -1,4 +1,12 @@
 import React from 'react';
+import React from 'react';
+import { Form, Button } from 'semantic-ui-react';
+import Validator from 'validator';
+import PropTypes from 'prop-types';
+import InlineError from '../messages/InlineError';
+import {forEach} from "react-bootstrap/es/utils/ElementChildren";
+import {Link} from "react-router-dom";
+import {userLoggedIn} from "../../actions/auth";
 
 import { userService } from '@/_services';
 
@@ -15,7 +23,9 @@ class StudentPage extends React.Component {
 
     componentDidMount() {
         userService.getAll().then(users => this.setState({ users }));
-        userService.getAll().then(users => this.setState({ users }));
+
+
+
         let studentid = "IT16173064"; // Here you should get the loged in students id and assign it to the studentid variable from session
         //let date = new Date();
         //let curdate=date.getFullYear()+"-"+date.getMonth()+"-"+date.getDate();
@@ -36,6 +46,7 @@ class StudentPage extends React.Component {
             assignmentname: "DS - ESB",
             studentid: "IT16173064" //Should came from session
         }
+
         this.props.history.push("/upload", {...data});
     }
 
