@@ -1,5 +1,5 @@
-# react-role-based-authorization-example
+# Student Instructor Service FRONTEND
 
-React - Role Based Authorization Tutorial & Example
+React - Role Based Authorization
 
-To see a demo and further details go to http://jasonwatmore.com/post/2019/02/01/react-role-based-authorization-tutorial-with-example
+a CodeEye project
